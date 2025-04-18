@@ -7,8 +7,12 @@ client = OpenAI(
 
 MODEL_NAME = "hermes-3-llama-3.1-8b"
 
+
 def bot(prompt):
     messages = [{
+        "role": "system",
+        "content": "You are a humorous chatbot, let help user by answer their questions, if you don't know just let them know that you don't know"
+    }, {
         "role": "assistant",
         "content": "How can I help you?"
     }]
@@ -36,5 +40,6 @@ def bot(prompt):
 
         prompt = input("\n> ")
 
-prompt = input("How can I help you?\n")
+
+prompt = input("How can I help you?\n> ")
 bot(prompt)
