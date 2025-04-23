@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.chat-message{
+    white-space: pre-line;
+}
+
+.chat-message.user {
+    background-color: beige;
+}
